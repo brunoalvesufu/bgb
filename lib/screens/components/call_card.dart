@@ -3,10 +3,13 @@
 import 'package:bgb/constants.dart';
 import 'package:bgb/models/call.dart';
 import 'package:flutter/material.dart';
+import 'package:country_icons/country_icons.dart';
 
 class CallCard extends StatelessWidget {
   const CallCard({Key? key, required this.call}) : super(key: key);
   final Call call;
+
+  final double iconSize = 35, iconHeight = 50, iconWidth = 25;
 
   @override
   Widget build(BuildContext context) {
@@ -43,26 +46,67 @@ class CallCard extends StatelessWidget {
                       ),
                       Text(
                         call.companyCode,
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 24),
+                      ),
+                      // Text(''),
+                      Text(
+                        'Preço de Compra:',
                         style: TextStyle(fontWeight: FontWeight.bold),
                       ),
-                      Text(''),
-                      Text('Preço de Compra:'),
-                      Text('De R\$ ${call.buyEntry} a R\$ ${call.buyMax}'),
-                      Text('Preço de Venda: R\$ ${call.objPrice}'),
-                      Text('Stop Loss: R\$ ${call.stopLoss}'),
+                      Text(
+                        'De R\$ ${call.buyEntry} a R\$ ${call.buyMax}',
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                      Text(
+                        'Preço de Venda: R\$ ${call.objPrice}',
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                      Text(
+                        'Stop Loss: R\$ ${call.stopLoss}',
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
                     ],
                   ),
                 ),
               ),
             ),
           ),
-
-          // Positioned(
-          //   top: kDefaultPadding,
-          //   left: kDefaultPadding,
-          //   height: 30,
-          //   child: Image.asset(call.companyIcon),
-          // ),
+          Positioned(
+            top: kDefaultPadding,
+            right: kDefaultPadding,
+            child: Column(
+              children: <Widget>[
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(8, 0, 0, 0),
+                  child: SizedBox(
+                    height: iconHeight + 10,
+                    width: iconWidth + 10,
+                    child: Image.asset('icons/flags/png/br.png',
+                        package: 'country_icons'),
+                  ),
+                ),
+                SizedBox(
+                  height: iconHeight,
+                  width: iconWidth,
+                  child: Icon(
+                    Icons.chat,
+                    color: kBackgroundColor,
+                    size: iconSize,
+                  ),
+                ),
+                SizedBox(
+                  height: iconHeight,
+                  width: iconWidth,
+                  child: Icon(
+                    Icons.favorite_border,
+                    color: kBackgroundColor,
+                    size: iconSize,
+                  ),
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );

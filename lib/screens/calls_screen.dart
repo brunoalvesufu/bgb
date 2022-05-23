@@ -5,7 +5,6 @@ import 'package:bgb/models/call.dart';
 import 'package:bgb/screens/components/call_card.dart';
 import 'package:bgb/screens/components/types.dart';
 import 'package:flutter/material.dart';
-import 'package:bgb/screens/components/call_card.dart';
 
 class CallsScreen extends StatelessWidget {
   const CallsScreen({Key? key}) : super(key: key);
