@@ -6,6 +6,9 @@ const kSecondaryColor = Color(0xFF2D68B6);
 const kTextColor = Color(0xFF000940);
 const kTextLightColor = Color(0xFF747474);
 const kBlueColor = Color(0xFF40BAD5);
+const kBrasilColor = Color.fromARGB(255, 3, 84, 6);
+const kUSAColor = Color.fromARGB(255, 110, 11, 4);
+const kCriptoColor = Color.fromARGB(255, 114, 70, 5);
 
 const kDefaultPadding = 20.0;
 
