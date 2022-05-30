@@ -27,6 +27,8 @@ class _MainPageState extends State<MainPage> {
     CallsScreenCp(),
   ];
 
+  final double iconSize = 32;
+
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
@@ -53,8 +55,8 @@ class _MainPageState extends State<MainPage> {
             icon: Image.asset(
               'icons/flags/png/br.png',
               package: 'country_icons',
-              height: 24,
-              width: 24,
+              height: iconSize,
+              width: iconSize,
             ),
             label: 'Bolsa Brasileira',
             backgroundColor: kBrasilColor,
@@ -63,8 +65,8 @@ class _MainPageState extends State<MainPage> {
             icon: Image.asset(
               'icons/flags/png/us.png',
               package: 'country_icons',
-              height: 24,
-              width: 24,
+              height: iconSize,
+              width: iconSize,
             ),
             label: 'Bolsa Americana',
             backgroundColor: kUSAColor,
@@ -72,8 +74,8 @@ class _MainPageState extends State<MainPage> {
           BottomNavigationBarItem(
             icon: Image.asset(
               'assets/images/bitcoin.png',
-              height: 24,
-              width: 24,
+              height: iconSize,
+              width: iconSize,
             ),
             label: 'Criptoativos',
             backgroundColor: kCriptoColor,

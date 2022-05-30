@@ -57,7 +57,7 @@ class CallsScreenCp extends StatelessWidget {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => detailScreen(
+                              builder: (context) => DetailScreen(
                                 call: callsDemoCP[index],
                               ),
                             ));

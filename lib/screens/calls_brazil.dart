@@ -3,7 +3,6 @@
 import 'package:bgb/constants.dart';
 import 'package:bgb/models/call.dart';
 import 'package:bgb/screens/components/call_card.dart';
-import 'package:bgb/screens/components/types.dart';
 import 'package:bgb/screens/detail_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -16,9 +15,12 @@ class CallsScreenBr extends StatelessWidget {
       backgroundColor: kBrasilColor,
       appBar: AppBar(
         elevation: 0,
-        title: Text('Bolsa Brasileira'),
-        centerTitle: false,
-        backgroundColor: kBrasilColor,
+        title: Text(
+          'Bolsa Brasileira'.toUpperCase(),
+          style: TextStyle(color: kPrimaryColor),
+        ),
+        centerTitle: true,
+        backgroundColor: kBackgroundColor,
         actions: <Widget>[
           IconButton(
               onPressed: null,
@@ -56,7 +58,7 @@ class CallsScreenBr extends StatelessWidget {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => detailScreen(
+                            builder: (context) => DetailScreen(
                               call: callsDemoBR[index],
                             ),
                           ));

@@ -50,44 +50,42 @@ class CallCard extends StatelessWidget {
                 decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(20)),
-                child: Expanded(
-                  child: Center(
-                    child: Column(
-                      children: <Widget>[
-                        SizedBox(
-                          height: kDefaultPadding / 2,
+                child: Center(
+                  child: Column(
+                    children: <Widget>[
+                      SizedBox(
+                        height: kDefaultPadding / 2,
+                      ),
+                      SizedBox(
+                        height: 30,
+                        child: Hero(
+                          tag: 'companyLogo',
+                          child: Image.asset(call.companyIcon),
                         ),
-                        SizedBox(
-                          height: 30,
-                          child: Hero(
-                            tag: 'companyLogo',
-                            child: Image.asset(call.companyIcon),
-                          ),
-                        ),
-                        Text(
-                          call.companyCode,
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 24),
-                        ),
-                        // Text(''),
-                        Text(
-                          'Preço de Entrada: R\$ ${call.buyEntry}',
-                          style: TextStyle(fontWeight: FontWeight.bold),
-                        ),
-                        // Text(
-                        //   'De R\$ ${call.buyEntry} a R\$ ${call.buyMax}',
-                        //   style: TextStyle(fontWeight: FontWeight.bold),
-                        // ),
-                        Text(
-                          'Preço de Venda: R\$ ${call.objPrice}',
-                          style: TextStyle(fontWeight: FontWeight.bold),
-                        ),
-                        Text(
-                          'Stop Loss: R\$ ${call.stopLoss}',
-                          style: TextStyle(fontWeight: FontWeight.bold),
-                        ),
-                      ],
-                    ),
+                      ),
+                      Text(
+                        call.companyCode,
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 24),
+                      ),
+                      // Text(''),
+                      Text(
+                        'Preço de Entrada: R\$ ${call.buyEntry}',
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                      // Text(
+                      //   'De R\$ ${call.buyEntry} a R\$ ${call.buyMax}',
+                      //   style: TextStyle(fontWeight: FontWeight.bold),
+                      // ),
+                      Text(
+                        'Preço de Venda: R\$ ${call.objPrice}',
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                      Text(
+                        'Stop Loss: R\$ ${call.stopLoss}',
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                    ],
                   ),
                 ),
               ),
@@ -97,16 +95,15 @@ class CallCard extends StatelessWidget {
               right: kDefaultPadding,
               child: Column(
                 children: <Widget>[
-                  // Padding(
-                  //   padding: const EdgeInsets.fromLTRB(8, 0, 0, 0),
-                  //   child: SizedBox(
-                  //     height: iconHeight + 10,
-                  //     width: iconWidth + 10,
-                  //     child: Image.asset('icons/flags/png/br.png',
-                  //         package: 'country_icons'),
-                  //   ),
-                  // ),
-
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(8, 0, 0, 0),
+                    child: SizedBox(
+                      height: iconHeight + 10,
+                      width: iconWidth + 10,
+                      child: Image.asset('icons/flags/png/br.png',
+                          package: 'country_icons'),
+                    ),
+                  ),
                   Icon(
                     Icons.chat,
                     color: kBackgroundColor,
