@@ -29,7 +29,7 @@ const kDefaultShadow = BoxShadow(
 );
 
 const IconCard iconBR = IconCard(
-  title: 'Recomendações\nBolsa Brasileira',
+  title: 'Bolsa Brasileira',
   icon: Icons.auto_graph,
   cardBackColor: kSecondaryColor,
   whereTo: CallsScreenBr(
@@ -37,7 +37,7 @@ const IconCard iconBR = IconCard(
   ),
 );
 const IconCard iconUS = IconCard(
-  title: 'Recomendações\nBolsa Americana',
+  title: 'Bolsa Americana',
   icon: Icons.attach_money,
   cardBackColor: kSecondaryColor,
   whereTo: CallsScreenUs(
@@ -45,7 +45,7 @@ const IconCard iconUS = IconCard(
   ),
 );
 const IconCard iconCP = IconCard(
-  title: 'Recomendações\nde Criptoativos',
+  title: 'Criptoativos',
   icon: Icons.currency_bitcoin,
   cardBackColor: kSecondaryColor,
   whereTo: CallsScreenCp(
