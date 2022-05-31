@@ -7,23 +7,40 @@ import 'package:bgb/screens/detail_screen.dart';
 import 'package:flutter/material.dart';
 
 class CallsScreenUs extends StatelessWidget {
-  const CallsScreenUs({Key? key}) : super(key: key);
+  const CallsScreenUs({Key? key, required this.returning}) : super(key: key);
+
+  final bool returning;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: kUSAColor,
+      backgroundColor: kBackgroundColor,
       appBar: AppBar(
         elevation: 0,
-        title: Text('Bolsa Americana'),
-        centerTitle: false,
-        backgroundColor: kUSAColor,
+        leading: returning
+            ? IconButton(
+                icon: const Icon(
+                  Icons.arrow_back,
+                  color: kPrimaryColor,
+                ),
+                padding: EdgeInsets.only(left: kDefaultPadding),
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+              )
+            : null,
+        title: Text(
+          'Bolsa Americana'.toUpperCase(),
+          style: TextStyle(color: kPrimaryColor),
+        ),
+        centerTitle: true,
+        backgroundColor: kBackgroundColor,
         actions: <Widget>[
           IconButton(
               onPressed: null,
               icon: Icon(
                 Icons.notifications,
-                color: kBackgroundColor,
+                color: kPrimaryColor,
               ))
         ],
       ),

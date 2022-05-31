@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:bgb/constants.dart';
+import 'package:bgb/screens/components/icon_card%20.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -32,13 +33,31 @@ class HomePage extends StatelessWidget {
           color: kPrimaryColor,
           height: 60,
         ),
-        ListView.builder(
-          itemCount: iconsList.length,
-          itemBuilder: (context, index) {
-            return iconsList[index];
-          },
-          scrollDirection: Axis.horizontal,
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+          child: GridView.builder(
+            itemCount: iconsList.length,
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2,
+              mainAxisSpacing: kDefaultPadding,
+              crossAxisSpacing: kDefaultPadding,
+              childAspectRatio: 1,
+            ),
+            itemBuilder: (context, index) => IconCard(
+              title: iconsList[index].title,
+              icon: iconsList[index].icon,
+              cardBackColor: iconsList[index].cardBackColor,
+              whereTo: iconsList[index].whereTo,
+            ),
+          ),
         )
+        // ListView.builder(
+        //   itemCount: iconsList.length,
+        //   itemBuilder: (context, index) {
+        //     return iconsList[index];
+        //   },
+        //   scrollDirection: Axis.horizontal,
+        // )
       ]),
     );
   }

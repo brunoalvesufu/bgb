@@ -7,14 +7,28 @@ import 'package:bgb/screens/detail_screen.dart';
 import 'package:flutter/material.dart';
 
 class CallsScreenBr extends StatelessWidget {
-  const CallsScreenBr({Key? key}) : super(key: key);
+  const CallsScreenBr({Key? key, required this.returning}) : super(key: key);
+
+  final bool returning;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: kBrasilColor,
+      backgroundColor: kBackgroundColor,
       appBar: AppBar(
         elevation: 0,
+        leading: returning
+            ? IconButton(
+                icon: const Icon(
+                  Icons.arrow_back,
+                  color: kPrimaryColor,
+                ),
+                padding: EdgeInsets.only(left: kDefaultPadding),
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+              )
+            : null,
         title: Text(
           'Bolsa Brasileira'.toUpperCase(),
           style: TextStyle(color: kPrimaryColor),
@@ -26,7 +40,7 @@ class CallsScreenBr extends StatelessWidget {
               onPressed: null,
               icon: Icon(
                 Icons.notifications,
-                color: kBackgroundColor,
+                color: kPrimaryColor,
               ))
         ],
       ),

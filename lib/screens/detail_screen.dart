@@ -66,7 +66,7 @@ class _DetailScreenState extends State<DetailScreen> {
                       child: SizedBox(
                         height: 45,
                         child: Hero(
-                          tag: 'companyLogo',
+                          tag: widget.call.companyCode,
                           child: Image.asset(widget.call.companyIcon),
                         ),
                       ),

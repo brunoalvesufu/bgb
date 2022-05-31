@@ -9,23 +9,40 @@ import 'package:flutter/material.dart';
 import 'detail_screen.dart';
 
 class CallsScreenCp extends StatelessWidget {
-  const CallsScreenCp({Key? key}) : super(key: key);
+  const CallsScreenCp({Key? key, required this.returning}) : super(key: key);
+
+  final bool returning;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: kCriptoColor,
+      backgroundColor: kBackgroundColor,
       appBar: AppBar(
         elevation: 0,
-        title: Text('Criptoativos'),
-        centerTitle: false,
-        backgroundColor: kCriptoColor,
+        leading: returning
+            ? IconButton(
+                icon: const Icon(
+                  Icons.arrow_back,
+                  color: kPrimaryColor,
+                ),
+                padding: EdgeInsets.only(left: kDefaultPadding),
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+              )
+            : null,
+        title: Text(
+          'Criptoativos'.toUpperCase(),
+          style: TextStyle(color: kPrimaryColor),
+        ),
+        centerTitle: true,
+        backgroundColor: kBackgroundColor,
         actions: <Widget>[
           IconButton(
               onPressed: null,
               icon: Icon(
                 Icons.notifications,
-                color: kBackgroundColor,
+                color: kPrimaryColor,
               ))
         ],
       ),

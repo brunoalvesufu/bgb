@@ -59,7 +59,7 @@ class CallCard extends StatelessWidget {
                       SizedBox(
                         height: 30,
                         child: Hero(
-                          tag: 'companyLogo',
+                          tag: call.companyCode,
                           child: Image.asset(call.companyIcon),
                         ),
                       ),
