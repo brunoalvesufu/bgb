@@ -1,6 +1,6 @@
 import 'package:bgb/screens/calls_brazil.dart';
 import 'package:bgb/screens/calls_cripto.dart';
-import 'package:bgb/screens/calls_favorites.dart';
+import 'package:bgb/screens/calls_statistics.dart';
 import 'package:bgb/screens/calls_usa.dart';
 import 'package:bgb/screens/components/icon_card%20.dart';
 import 'package:bgb/screens/config_screen.dart';
