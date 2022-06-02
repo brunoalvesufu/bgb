@@ -37,6 +37,7 @@ dependencies:
   google_fonts: ^3.0.0
   flutter_svg: ^1.0.3
   country_icons: ^2.0.2
+  data_table_2: ^2.2.3
 
 dev_dependencies:
   flutter_test:
