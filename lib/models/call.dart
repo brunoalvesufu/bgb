@@ -3,7 +3,7 @@ import 'package:bgb/models/call_comment.dart';
 class Call {
   final String companyCode, companyName, companyIcon;
   final int type;
-  final String buyEntry, buyMax, objPrice, stopLoss;
+  final String strategy, buyEntry, buyMax, objPrice, stopLoss;
   late bool isFavorite = false;
   late List<CallComment> comments = [];
 
@@ -18,6 +18,7 @@ class Call {
     this.stopLoss,
     this.isFavorite,
     this.comments,
+    this.strategy,
   );
 }
 
@@ -32,7 +33,8 @@ List<Call> callsDemoBR = [
       '95,00',
       '78,00',
       false,
-      [commentDemo1, commentDemo2, commentDemo3, commentDemo4]),
+      [commentDemo1, commentDemo2, commentDemo3, commentDemo4],
+      'Ichimoku'),
   Call(
       'PETR4',
       'Petrobras',
@@ -43,7 +45,8 @@ List<Call> callsDemoBR = [
       '45,00',
       '30,00',
       true,
-      [commentDemo1, commentDemo2, commentDemo3, commentDemo5]),
+      [commentDemo1, commentDemo2, commentDemo3, commentDemo5],
+      'Ichimoku'),
   Call(
       'MGLU3',
       'Magazine Luiza',
@@ -54,7 +57,8 @@ List<Call> callsDemoBR = [
       '5,50',
       '3,20',
       false,
-      [commentDemo1, commentDemo2, commentDemo4, commentDemo5]),
+      [commentDemo1, commentDemo2, commentDemo4, commentDemo5],
+      'Ichimoku'),
 ];
 List<Call> callsDemoUS = [
   Call(
@@ -67,11 +71,22 @@ List<Call> callsDemoUS = [
       '2500,00',
       '2000,00',
       false,
-      [commentDemo1, commentDemo3, commentDemo4, commentDemo5]),
+      [commentDemo1, commentDemo3, commentDemo4, commentDemo5],
+      'Ichimoku'),
 ];
 List<Call> callsDemoCP = [
-  Call('BTC', 'Bitcoin', 'assets/images/bitcoin.png', 3, '4,00', '4,20', '5,50',
-      '3,20', false, [commentDemo2, commentDemo3, commentDemo4, commentDemo5]),
+  Call(
+      'BTC',
+      'Bitcoin',
+      'assets/images/bitcoin.png',
+      3,
+      '4,00',
+      '4,20',
+      '5,50',
+      '3,20',
+      false,
+      [commentDemo2, commentDemo3, commentDemo4, commentDemo5],
+      'Ichimoku'),
 ];
 //Demo of Calls List
 

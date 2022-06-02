@@ -29,9 +29,11 @@ const kDefaultShadow = BoxShadow(
 );
 
 const IconCard iconBR = IconCard(
-  title: 'Bolsa Brasileira',
+  title: 'BOLSA BRASILEIRA',
   icon: Icons.auto_graph,
   cardBackColor: kSecondaryColor,
+  backgroundImage:
+      AssetImage('icons/flags/png/br.png', package: 'country_icons'),
   whereTo: CallsScreenBr(
     returning: true,
   ),
@@ -40,6 +42,8 @@ const IconCard iconUS = IconCard(
   title: 'Bolsa Americana',
   icon: Icons.attach_money,
   cardBackColor: kSecondaryColor,
+  backgroundImage:
+      AssetImage('icons/flags/png/us.png', package: 'country_icons'),
   whereTo: CallsScreenUs(
     returning: true,
   ),
@@ -48,26 +52,30 @@ const IconCard iconCP = IconCard(
   title: 'Criptoativos',
   icon: Icons.currency_bitcoin,
   cardBackColor: kSecondaryColor,
+  backgroundImage: AssetImage('assets/images/bitcoin.png'),
   whereTo: CallsScreenCp(
     returning: true,
   ),
 );
 const IconCard iconFV = IconCard(
-  title: 'Favoritos',
-  icon: Icons.favorite,
+  title: 'HISTÓRICO',
+  icon: Icons.book,
   cardBackColor: kSecondaryColor,
-  whereTo: CallsFavorites(),
+  backgroundImage: AssetImage('assets/images/logo.png'),
+  whereTo: CallsHistory(),
 );
 const IconCard iconCM = IconCard(
   title: 'Indicar Aplicativo',
   icon: Icons.share,
   cardBackColor: kSecondaryColor,
+  backgroundImage: AssetImage('assets/images/logo.png'),
   whereTo: ShareScreen(),
 );
 const IconCard iconCG = IconCard(
   title: 'Configurações',
   icon: Icons.settings,
   cardBackColor: kSecondaryColor,
+  backgroundImage: AssetImage('assets/images/logo.png'),
   whereTo: ConfigScreen(),
 );
 

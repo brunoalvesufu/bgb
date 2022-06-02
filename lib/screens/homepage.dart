@@ -47,6 +47,7 @@ class HomePage extends StatelessWidget {
               title: iconsList[index].title,
               icon: iconsList[index].icon,
               cardBackColor: iconsList[index].cardBackColor,
+              backgroundImage: iconsList[index].backgroundImage,
               whereTo: iconsList[index].whereTo,
             ),
           ),

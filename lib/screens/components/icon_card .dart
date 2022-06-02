@@ -9,13 +9,15 @@ class IconCard extends StatelessWidget {
       this.cardBackColor,
       required this.title,
       required this.icon,
-      required this.whereTo})
+      required this.whereTo,
+      required this.backgroundImage})
       : super(key: key);
 
   final Widget whereTo;
   final Color? cardBackColor;
   final String title;
   final IconData icon;
+  final ImageProvider backgroundImage;
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +37,14 @@ class IconCard extends StatelessWidget {
           margin: EdgeInsets.all(5),
           padding: EdgeInsets.all(kDefaultPadding / 4),
           decoration: BoxDecoration(
-              color: Colors.white, borderRadius: BorderRadius.circular(20)),
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(20),
+            image: DecorationImage(
+              image: backgroundImage,
+              fit: BoxFit.fitHeight,
+              opacity: 0.2,
+            ),
+          ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
@@ -46,7 +55,7 @@ class IconCard extends StatelessWidget {
               ),
               Text(
                 title,
-                style: TextStyle(fontSize: 18),
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                 textAlign: TextAlign.center,
               )
             ],

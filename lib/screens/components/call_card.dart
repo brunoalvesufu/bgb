@@ -3,7 +3,6 @@
 import 'package:bgb/constants.dart';
 import 'package:bgb/models/call.dart';
 import 'package:flutter/material.dart';
-import 'package:country_icons/country_icons.dart';
 
 class CallCard extends StatelessWidget {
   const CallCard({Key? key, required this.call, this.press}) : super(key: key);
@@ -68,7 +67,10 @@ class CallCard extends StatelessWidget {
                         style: TextStyle(
                             fontWeight: FontWeight.bold, fontSize: 24),
                       ),
-                      // Text(''),
+                      Text(
+                        'Estratégia: ${call.strategy}',
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
                       Text(
                         'Preço de Entrada: R\$ ${call.buyEntry}',
                         style: TextStyle(fontWeight: FontWeight.bold),

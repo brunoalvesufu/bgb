@@ -103,37 +103,37 @@ class _DetailScreenState extends State<DetailScreen> {
                             'Stop Loss: R\$ ${widget.call.stopLoss}',
                             style: TextStyle(fontWeight: FontWeight.bold),
                           ),
-                          Padding(
-                            padding: const EdgeInsets.all(kDefaultPadding),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: <Widget>[
-                                Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Text(
-                                    'Perca Máxima:',
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 18),
-                                  ),
-                                ),
-                                Container(
-                                  padding: EdgeInsets.all(kDefaultPadding / 4),
-                                  decoration: BoxDecoration(
-                                    color: Colors.red,
-                                    borderRadius:
-                                        BorderRadius.all(Radius.circular(5)),
-                                  ),
-                                  child: Text(
-                                    '${getLoss().toStringAsFixed(2)}%',
-                                    style: TextStyle(
-                                        fontSize: 18,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
+                          // Padding(
+                          //   padding: const EdgeInsets.all(kDefaultPadding),
+                          //   child: Row(
+                          //     mainAxisAlignment: MainAxisAlignment.center,
+                          //     children: <Widget>[
+                          //       // Padding(
+                          //       //   padding: const EdgeInsets.all(8.0),
+                          //       //   child: Text(
+                          //       //     'Perca Máxima:',
+                          //       //     style: TextStyle(
+                          //       //         fontWeight: FontWeight.bold,
+                          //       //         fontSize: 18),
+                          //       //   ),
+                          //       // ),
+                          //       Container(
+                          //         padding: EdgeInsets.all(kDefaultPadding / 4),
+                          //         decoration: BoxDecoration(
+                          //           color: Colors.red,
+                          //           borderRadius:
+                          //               BorderRadius.all(Radius.circular(5)),
+                          //         ),
+                          //         child: Text(
+                          //           '${getLoss().toStringAsFixed(2)}%',
+                          //           style: TextStyle(
+                          //               fontSize: 18,
+                          //               fontWeight: FontWeight.bold),
+                          //         ),
+                          //       ),
+                          //     ],
+                          //   ),
+                          // ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: <Widget>[

@@ -33,7 +33,7 @@ class _MainPageState extends State<MainPage> {
     ),
   ];
 
-  final double iconSize = 32;
+  final double iconSize = 44;
 
   void _onItemTapped(int index) {
     setState(() {
@@ -53,7 +53,10 @@ class _MainPageState extends State<MainPage> {
       bottomNavigationBar: BottomNavigationBar(
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: Icon(
+              Icons.home,
+              size: iconSize,
+            ),
             label: 'Home',
             backgroundColor: kPrimaryColor,
           ),
@@ -90,6 +93,7 @@ class _MainPageState extends State<MainPage> {
         currentIndex: _selectedIndex,
         selectedItemColor: kBackgroundColor,
         onTap: _onItemTapped,
+        iconSize: iconSize,
       ),
     );
   }
