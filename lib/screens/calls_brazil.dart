@@ -62,7 +62,12 @@ class CallsScreenBr extends StatelessWidget {
                       topRight: Radius.circular(60)),
                 ),
               ),
-              Image.asset('assets/images/logo.png'),
+              Opacity(
+                opacity: 0.4,
+                child: Image.asset(
+                  'assets/images/logo.png',
+                ),
+              ),
               ListView.builder(
                 itemCount: callsDemoBR.length,
                 itemBuilder: ((context, index) {

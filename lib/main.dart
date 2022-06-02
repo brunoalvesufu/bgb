@@ -3,10 +3,12 @@
 import 'package:bgb/screens/mainpage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_settings_screens/flutter_settings_screens.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'constants.dart';
 
-void main() {
+void main() async {
+  await Settings.init(cacheProvider: SharePreferenceCache());
   WidgetsFlutterBinding.ensureInitialized();
 
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
