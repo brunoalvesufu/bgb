@@ -85,5 +85,7 @@ const List<IconCard> iconsList = [
   iconCP,
   iconFV,
   iconCM,
+  iconCG,
+  iconCM,
   iconCG
 ];
